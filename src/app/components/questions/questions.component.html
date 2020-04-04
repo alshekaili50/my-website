@@ -1,0 +1,86 @@
+
+
+<mat-card style="text-align: right;"[hidden]="!endOfQuiz">
+    <div style="text-align: right; font-size: 20px;margin: 40px;font-family: Arial, Helvetica, sans-serif;color: steelblue;">
+        {{question.question}}
+
+    </div>
+    <div style="text-align: right;margin: 20px;"  *ngFor="let i of question.options;let in=index">
+        <button (click)="calculateScore(question,in);nextQuestion()">
+            {{i}}
+        </button>
+    </div>
+
+
+</mat-card>
+
+
+<mat-card [hidden]="!showScore" style="text-align: right;">
+    <div class="score" style="text-align: center;">
+        <span style="font-size: 40px;color: steelblue; margin: 60px;" >
+            النتيجة
+        </span>
+        <br>
+        <span style="color: steelblue;font-size: 40px;margin: 60px;">
+            {{score}}%
+
+        </span>
+    </div>
+    <div style="text-align: right;margin: 20px;">
+        <button (click)="showCorrectAnswers(0)">
+            راجع الإجابات
+        </button>
+        <button (click)="showCorrectAnswers(0)">
+            أعد التحدي
+        </button>
+
+    </div>
+
+
+</mat-card>
+
+<mat-card style="text-align: right;" [hidden]="!showCorrectQuestion">
+    <div style="text-align: right; font-size: 20px;margin: 40px;font-family: Arial, Helvetica, sans-serif;color: steelblue;">
+        {{question.question}}
+
+    </div>
+    <div style="text-align: right;margin: 20px;"  *ngFor="let i of question.options;let in=index">
+        <div *ngIf="indicesOfCorrectAnswers[reviewCounter]">
+            
+            <button *ngIf="indicesOfAnswers[reviewCounter]==in" style="background-color: green;">
+                {{i}}
+            </button>
+            <button *ngIf="in!=indicesOfAnswers[reviewCounter]">
+                {{i}}
+            </button>
+
+
+        </div>
+        <div *ngIf="!indicesOfCorrectAnswers[reviewCounter]">
+            <button *ngIf="in==indicesOfUserClicks[reviewCounter]" style="background-color: red;">
+                {{i}}
+            </button>
+            <button *ngIf="in==indicesOfAnswers[reviewCounter]" style="background-color: green;">
+                {{i}}
+            </button>
+            <button *ngIf="in!=indicesOfAnswers[reviewCounter]&&in!=indicesOfUserClicks[reviewCounter]">
+                {{i}}
+            </button>
+
+
+
+        </div>
+
+        <div>
+
+        </div>
+
+    </div>
+    <button (click)="showCorrectAnswers(1)">
+        التالي
+    </button>
+
+
+</mat-card>
+
+
