@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import {Router} from "@angular/router"
+import {CookieService} from 'ngx-cookie-service'
 
 
 @Component({
@@ -9,21 +10,9 @@ import {Router} from "@angular/router"
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  userNmae:string
   title = 'my-website';
-  constructor(private modalService: NgbModal,private router: Router) {}
-
-  open(content,b,c) {
-    console.log(b,c)
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      console.log(content)
-      console.log(result)
-      this.router.navigate(['/questions', b,c,1])
-
-    }, (reason) => {
-    
-    });
-  }
-
+  constructor(private modalService: NgbModal,private router: Router,private cookieService:CookieService) {}
 
 
 }

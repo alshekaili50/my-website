@@ -1,1 +1,72 @@
-<p>dashboard works!</p>
+
+
+<p class="name">
+    أهلا وسهلا
+    {{userName}}
+
+</p>
+<div class="score" style="color: rgba(0, 68, 255, 0.753);font-size: 30px; margin: 30px;">
+    مجموعك النهائي 
+    {{score}}%
+</div>
+<div style="color: rgba(0, 68, 255, 0.753);font-size: 15px;">
+    قائمة الاختبارات المنجزة
+    <div *ngFor="let i of finishedQuizzez" style="margin: 50px;">
+        {{i.quiz}}
+        <mat-progress-bar mode="determinate" [value]="i.score" style="margin: 20px;"></mat-progress-bar>
+                {{i.score}}%
+
+
+    </div>
+</div>
+
+<div class="share" style="align-items:right;" *ngIf="score">
+    <button mat-fab color="primary" class="button-share" (click)="openShare()">
+        <mat-icon>share</mat-icon>          
+    </button>
+    
+
+  
+  </div>
+
+  <app-modal>
+
+  </app-modal>
+
+  
+  <ng-template #share let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">شارك نتيجتك مع أصدقائك وعائلتك</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        {{text}}
+    </div>
+    <div class="modal-footer">
+        <div>
+            <a [href]="textTwitter" mat-list-item target="_blank">
+                <img src="../../../assets/icons/Twitter_Logo_Blue.png" style="height: 60px;">
+            </a>
+
+
+        </div>
+        <div>
+            
+            <a [href]="textWhatsup" mat-list-item target="_blank">
+                <img src="../../../assets/icons/WhatsApp_Logo_1.png" style="height: 90px;">
+            </a>
+        
+
+        </div>
+    
+        <button [cdkCopyToClipboard]="text" mat-button color="primary">Copy to clipboard</button>
+
+
+    </div>
+  </ng-template>
+
+    
+        
+    

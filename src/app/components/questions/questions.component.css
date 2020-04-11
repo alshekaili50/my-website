@@ -1,4 +1,4 @@
-button {
+.question-button {
 	border: none;
 	background: #3a7999;
 	color: #f2f2f2;
@@ -10,7 +10,7 @@ button {
     transition: all 500ms ease; 
     width: 100px;
 }
-button:before {
+.question-button:before {
 	content:'';
 	position: absolute;
 	top: 0px;
@@ -19,5 +19,4 @@ button:before {
 	background: rgba(255,255,255,0.3);
 	border-radius: 5px;
     transition: all 2s ease;
-    width: 100px;
 } 

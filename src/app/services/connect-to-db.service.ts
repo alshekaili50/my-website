@@ -13,7 +13,7 @@ export class ConnectToDBService {
   getQuestions(type,title,level){
 
 
-      return this.firestore.collection('challenges/ar_math_challenges/level1').get()
+      return this.firestore.collection('challenges/'+type+'/'+title+'/'+level+'/questions').get()
 
 
     

@@ -1,0 +1,72 @@
+<ng-template #getUserName let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">اسمك الكريم</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form style="text-align: right;">
+        <mat-form-field style="text-align: right;" >
+          <mat-label style="text-align: right;">اسمك</mat-label>
+          <input style="text-align: right;"  #inputname  matInput placeholder="اسمك الكريم">
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="modal-footer" style="align-items: center;">
+      <button  type="button" style="text-align: right;" class="btn btn-outline-dark" (click)="modal.close(inputname.value)">بدأ التحدي</button>
+    </div>
+  </ng-template>
+  
+    
+  
+
+            
+  <ng-template #list let-modal style="direction: rtl;">
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">اختر االتحدي</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+        <div class="row" style="text-align: center;margin: 40px;">
+            <div class="col"style="margin: 20px;">
+              <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>اللهجة الإماراتية</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button (click)="navigate('accents','uae','001')"(click)="modal.dismiss()" ngbDropdownItem>المستوى الأول</button>
+                  <button (click)="navigate('accents','uae','002')" (click)="modal.dismiss()" ngbDropdownItem>المستوى الثاني</button>
+                  <button (click)="navigate('accents','uae','003')"  (click)="modal.dismiss()" ngbDropdownItem>المستوى الثالث</button>
+              </div>
+              </div>
+            </div>
+            <div class="col" style="margin: 20px;">
+              <div ngbDropdown class="d-inline-block">
+                <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>اللهجة السعودية</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                  <button (click)="navigate('accents','ksa','001')" (click)="modal.dismiss()" ngbDropdownItem>النجدية</button>
+                  <button (click)="navigate('accents','ksa','002')" (click)="modal.dismiss()" ngbDropdownItem>الحجازية</button>
+                  <button (click)="navigate('accents','ksa','003')"  (click)="modal.dismiss()"ngbDropdownItem>الجنوبية</button>
+                </div>
+              </div>
+            </div>
+            <div class="col" style="margin: 20px;">
+                <div ngbDropdown class="d-inline-block">
+                  <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>اللهجة العمانية</button>
+                  <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button (click)="navigate('accents','oman','001')" (click)="modal.dismiss()" ngbDropdownItem>المستوى الأول</button>
+                    <button (click)="navigate('accents','oman','002')" (click)="modal.dismiss()" ngbDropdownItem>المستوى الثاني</button>
+                    <button (click)="navigate('accents','oman','003')"  (click)="modal.dismiss()"ngbDropdownItem>المستوى الثالث</button>
+                  </div>
+                </div>
+              </div>
+  
+          
+                
+          </div>        
+
+    </div>
+    <div class="modal-footer">
+    </div>
+  </ng-template>
