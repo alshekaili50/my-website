@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "my-website-83431": {
+      "hosting": {
+        "my-website": [
+          "my-website-83431"
+        ]
+      }
+    }
+  }
+}

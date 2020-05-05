@@ -1,0 +1,57 @@
+{
+    "accents":{
+        "uae":[
+        
+        {"title":"اللهجة الاماراتية",
+        "country":"uae"}
+        ,
+
+        {
+            "challengeTitle":"اللهجة الاماراتية المستوى الأول ",
+            "challengeCode":"001"
+        },
+        {
+            "challengeTitle":"اللهجة الاماراتية المستوى الثاني ",
+            "challengeCode":"002"
+        },
+        {
+            "challengeTitle":"اللهجة الاماراتية المستوى الثالث ",
+            "challengeCode":"003"
+        }
+
+    ],
+    "ksa":[
+        {"title":"اللهجة السعودية",
+        "country":"uae"},
+        {
+            "challengeTitle":"اللهجة السعودية النجدية ",
+            "challengeCode":"001"
+        },
+        {
+            "challengeTitle":"اللهجة السعودية الحجازية",
+            "challengeCode":"002"
+        },
+        {
+            "challengeTitle":"اللهجة السعودية الجنوبية",
+            "challengeCode":"003"
+        }
+
+    ],
+    "oman":[
+        {"title":"اللهجة العمانية",
+            "country":"oman"},
+            {
+                "challengeTitle":"اللهجة العمانية المستوى الاول ",
+                "challengeCode":"001"
+            },
+            {
+                "challengeTitle":"اللهجة العمانية المستوى الثاني ",
+                "challengeCode":"002"
+            }
+
+
+    ]
+    
+
+    }
+}

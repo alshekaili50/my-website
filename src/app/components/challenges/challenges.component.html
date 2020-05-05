@@ -1,0 +1,38 @@
+<div class="row" style="text-align: center;margin: 40px;" *ngIf="type=='accents'">
+  <div class="col"style="margin: 20px;">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>اللهجة الإماراتية</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button (click)="open('accents','uae','001')" ngbDropdownItem>المستوى الأول</button>
+        <button (click)="open('accents','uae','002')" ngbDropdownItem>المستوى الثاني</button>
+        <button (click)="open('accents','uae','003')" ngbDropdownItem>المستوى الثالث</button>
+    </div>
+    </div>
+  </div>
+  <div class="col" style="margin: 20px;">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>اللهجة السعودية</button>
+      <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+        <button (click)="open('accents','ksa','001')" ngbDropdownItem>النجدية</button>
+        <button (click)="open('accents','ksa','002')" ngbDropdownItem>الحجازية</button>
+        <button (click)="open('accents','ksa','003')" ngbDropdownItem>الجنوبية</button>
+      </div>
+    </div>
+  </div>
+
+      
+</div>
+<div class="row" style="text-align: center;margin: 40px;" *ngIf="type=='math'">
+  no quiz yet
+      
+</div>
+
+
+  
+  
+          
+  
+  
+  
+      
+  

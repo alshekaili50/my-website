@@ -1,0 +1,29 @@
+*{
+    text-align-last: center;
+    direction: rtl;
+}
+
+.name{
+    margin: 40px;
+    font-size: 30px;
+    color: rgba(0, 68, 255, 0.753);
+}
+
+.share{
+    position: relative;
+    top: 0;
+  }
+  .button-share{
+    position: absolute;
+    top: 8px;
+    right: 16px;
+    font-size: 18px;
+    }
+tr{
+    margin: 30px;
+}
+.display-1 {
+    font-size: 6rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
